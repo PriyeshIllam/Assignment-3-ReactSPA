@@ -1,0 +1,89 @@
+.banner {
+  background: url('/public/images/banner.jpg') no-repeat center center/cover;
+  text-align: center;
+  padding: 40px;
+  color: white;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Search Box Styling */
+.searchSection {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 5px;
+  border-radius: 25px;
+  width: 300px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.searchIcon {
+  font-size: 18px;
+  color: #0073bb;
+  margin: 0 10px;
+}
+
+.input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.searchButton {
+  background: #0073bb;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.searchButton:hover {
+  background: #005f99;
+}
+
+/* Categories Styling */
+.categories {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.categories button {
+  padding: 10px 15px;
+  border: none;
+  background: white;
+  color: #0073bb;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.categories button:hover {
+  background: #0073bb;
+  color: white;
+}
+
+.icon {
+  font-size: 20px;
+}
