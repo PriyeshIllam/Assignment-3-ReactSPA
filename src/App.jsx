@@ -4,8 +4,8 @@ import Hotels from "./pages/Hotels";
 import ThingsToDo from "./pages/ThingsToDo";
 import Restaurants from "./pages/Restaurants";
 import Header from "./components/Header";
-import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
+import Banner from "./components/Banner";
 import "./styles/App.css";
 
 export default function App() {
@@ -27,7 +27,7 @@ export default function App() {
   return (
     <div className="app-container">
       <Header />
-      <Navigation setCurrentPage={setCurrentPage} />
+      <Banner />
       <main>{renderPage()}</main>
       <Footer />
     </div>
