@@ -1,13 +1,23 @@
 .footer {
-    background-color: #f8f8f8;
-    text-align: center;
-    padding: 20px;
-    font-size: 14px;
-  }
-  
-  .socialLinks {
-    margin: 10px 0;
-  }
+  background-color: #f8f8f8;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.socialLinks {
+  margin: 10px 0;
+}
+
+.socialLinks a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #0073bb;
+}
+
+.socialLinks a:hover {
+  text-decoration: underline;
+}
   
   .icon {
     font-size: 24px;
@@ -18,5 +28,28 @@
   
   .icon:hover {
     color: #004f8a;
+  }
+ 
+  p {
+    margin-top: 10px;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .footer {
+      padding: 15px;
+      font-size: 12px;
+    }
+  
+    .socialLinks {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+  
+    .socialLinks a {
+      margin: 0 5px;
+    }
   }
   
