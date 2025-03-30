@@ -1,8 +1,10 @@
+/* Banner Background and Text */
 .banner {
   background: url('/public/images/banner.jpg') no-repeat center center/cover;
   text-align: center;
   padding: 40px;
   color: white;
+  position: relative;
 }
 
 h2 {
@@ -23,14 +25,16 @@ h2 {
   background: white;
   padding: 5px;
   border-radius: 25px;
-  width: 300px;
+  width: 100%;
+  max-width: 500px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 
 .searchIcon {
   font-size: 18px;
   color: #0073bb;
-  margin: 0 10px;
+  margin-left: 10px;
 }
 
 .input {
@@ -39,6 +43,7 @@ h2 {
   outline: none;
   padding: 10px;
   font-size: 14px;
+  border-radius: 20px;
 }
 
 .searchButton {
@@ -50,6 +55,10 @@ h2 {
   cursor: pointer;
   font-size: 14px;
   font-weight: bold;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .searchButton:hover {
@@ -86,4 +95,30 @@ h2 {
 
 .icon {
   font-size: 20px;
+}
+
+/* Responsive Styling for Mobile Devices */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .searchBox {
+    width: 90%;
+  }
+
+  .searchButton {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .categories button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .icon {
+    font-size: 18px;
+  }
 }
