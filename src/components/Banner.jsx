@@ -22,6 +22,8 @@ export default function Banner() {
         <button><FaHotel className={styles.icon} /> Hotels</button>
         <button><MdOutlineTour className={styles.icon} /> Things to Do</button>
         <button><FaUtensils className={styles.icon} /> Restaurants</button>
+        <button><FaPlane className={styles.icon} /> Flights</button>
+        <button><FaBuilding className={styles.icon} /> Vacation Rentals</button>
       </div>
     </div>
   );
