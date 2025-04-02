@@ -14,13 +14,13 @@ export default function App() {
   const renderPage = () => {
     switch (currentPage) {
       case "hotels":
-        return <Hotels />;
+        return <Hotels title="Browse Top Hotels" />;
       case "thingsToDo":
-        return <ThingsToDo />;
+        return <ThingsToDo title="Browse for activities" />;
       case "restaurants":
-        return <Restaurants />;
+        return <Restaurants title="Browse Top Restaurants" />;
       default:
-        return <Home setCurrentPage={setCurrentPage} />;
+        return <Home title="Hello, its your travel guide" setCurrentPage={setCurrentPage} />;
     }
   };
 

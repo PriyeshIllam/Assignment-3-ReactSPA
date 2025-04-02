@@ -2,7 +2,7 @@ import styles from "../styles/Home.module.css";
 import data from "../data/data";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 
-export default function Home({ setCurrentPage }) {
+export default function Home({ setCurrentPage,title }) {
   const renderStars = (rating) => {
     const stars = [];
     for (let i = 1; i <= 5; i++) {
@@ -19,7 +19,7 @@ export default function Home({ setCurrentPage }) {
 
   return (
     <div className={styles.homeContainer}>
-      <h1 className={styles.title}>Welcome to Travel Explorer</h1>
+      <h1 className={styles.title}>{title}</h1>
       <p className={styles.subtitle}>Discover amazing hotels, activities, and restaurants worldwide.</p>
 
       {/* Featured Hotels */}
