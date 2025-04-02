@@ -20,18 +20,16 @@ export default function App() {
       case "restaurants":
         return <Restaurants />;
       default:
-        return <Home />;
+        return <Home setCurrentPage={setCurrentPage} />;
     }
   };
 
   return (
     <div className="app-container">
       <Header />
-      {/* Pass setCurrentPage as a prop */}
       <Banner setCurrentPage={setCurrentPage} />
       <main>{renderPage()}</main>
       <Footer />
     </div>
   );
 }
-
