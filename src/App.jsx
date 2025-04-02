@@ -27,9 +27,11 @@ export default function App() {
   return (
     <div className="app-container">
       <Header />
-      <Banner />
+      {/* Pass setCurrentPage as a prop */}
+      <Banner setCurrentPage={setCurrentPage} />
       <main>{renderPage()}</main>
       <Footer />
     </div>
   );
 }
+
