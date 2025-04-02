@@ -2,7 +2,7 @@ import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import data from "../data/data"; // Import data
 import styles from "../styles/Restaurants.module.css";
 
-export default function Restaurants() {
+export default function Restaurants({ title }) {  // Accept title as a prop
   const renderStars = (rating) => {
     const stars = [];
     for (let i = 1; i <= 5; i++) {
@@ -18,24 +18,28 @@ export default function Restaurants() {
   };
 
   return (
-    <div className={styles.restaurantsContainer}>
-      {data.restaurants.map((restaurant) => (
-        <div key={restaurant.id} className={styles.restaurantCard}>
-          <img src={restaurant.image} alt={restaurant.name} className={styles.restaurantImage} />
-          
-          <div className={styles.restaurantInfo}>
-            <h3 className={styles.restaurantName}>{restaurant.name}</h3>
-            <p className={styles.restaurantLocation}>{restaurant.location}</p>
-            <p className={styles.restaurantCuisine}>{restaurant.cuisine} Cuisine</p>
+    <div className={styles.restaurantsPageContainer}>  {/* Wrapper for the page */}
+      <h1 className={styles.pageTitle}>{title}</h1>  {/* Display the passed title */}
+
+      <div className={styles.restaurantsContainer}>
+        {data.restaurants.map((restaurant) => (
+          <div key={restaurant.id} className={styles.restaurantCard}>
+            <img src={restaurant.image} alt={restaurant.name} className={styles.restaurantImage} />
             
-            {/* ⭐️ Rating */}
-            <div className={styles.rating}>
-              {renderStars(restaurant.rating)}
-              <span className={styles.ratingText}>{restaurant.rating.toFixed(1)} ({restaurant.reviews} reviews)</span>
+            <div className={styles.restaurantInfo}>
+              <h3 className={styles.restaurantName}>{restaurant.name}</h3>
+              <p className={styles.restaurantLocation}>{restaurant.location}</p>
+              <p className={styles.restaurantCuisine}>{restaurant.cuisine} Cuisine</p>
+              
+              {/* ⭐️ Rating */}
+              <div className={styles.rating}>
+                {renderStars(restaurant.rating)}
+                <span className={styles.ratingText}>{restaurant.rating.toFixed(1)} ({restaurant.reviews} reviews)</span>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

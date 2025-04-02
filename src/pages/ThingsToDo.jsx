@@ -2,7 +2,7 @@ import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import data from "../data/data"; // Import data
 import styles from "../styles/ThingsToDo.module.css";
 
-export default function ThingsToDo() {
+export default function ThingsToDo({ title }) {  // Accept title as a prop
   const renderStars = (rating) => {
     const stars = [];
     for (let i = 1; i <= 5; i++) {
@@ -18,24 +18,28 @@ export default function ThingsToDo() {
   };
 
   return (
-    <div className={styles.thingsToDoContainer}>
-      {data.thingsToDo.map((activity) => (
-        <div key={activity.id} className={styles.activityCard}>
-          <img src={activity.image} alt={activity.name} className={styles.activityImage} />
-          
-          <div className={styles.activityInfo}>
-            <h3 className={styles.activityName}>{activity.name}</h3>
-            <p className={styles.activityLocation}>{activity.location}</p>
-            <p className={styles.activityDescription}>{activity.description}</p>
+    <div className={styles.thingsToDoPageContainer}>  {/* Wrapper for the page */}
+      <h1 className={styles.pageTitle}>{title}</h1>  {/* Display the passed title */}
+
+      <div className={styles.thingsToDoContainer}>
+        {data.thingsToDo.map((activity) => (
+          <div key={activity.id} className={styles.activityCard}>
+            <img src={activity.image} alt={activity.name} className={styles.activityImage} />
             
-            {/* ⭐️ Rating */}
-            <div className={styles.rating}>
-              {renderStars(activity.rating)}
-              <span className={styles.ratingText}>{activity.rating.toFixed(1)} ({activity.reviews} reviews)</span>
+            <div className={styles.activityInfo}>
+              <h3 className={styles.activityName}>{activity.name}</h3>
+              <p className={styles.activityLocation}>{activity.location}</p>
+              <p className={styles.activityDescription}>{activity.description}</p>
+              
+              {/* ⭐️ Rating */}
+              <div className={styles.rating}>
+                {renderStars(activity.rating)}
+                <span className={styles.ratingText}>{activity.rating.toFixed(1)} ({activity.reviews} reviews)</span>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }
