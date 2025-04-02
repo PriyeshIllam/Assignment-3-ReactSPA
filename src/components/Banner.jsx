@@ -30,12 +30,6 @@ export default function Banner({ setCurrentPage }) {
         <button onClick={() => setCurrentPage("restaurants")}>
           <FaUtensils className={styles.icon} /> Restaurants
         </button>
-        <button>
-          <FaPlane className={styles.icon} /> Flights
-        </button>
-        <button>
-          <FaBuilding className={styles.icon} /> Vacation Rentals
-        </button>
       </div>
     </div>
   );
